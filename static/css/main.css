@@ -1,0 +1,197 @@
+a,a:link{color:#000;outline:none;text-decoration:none;}
+div.entry-content a,div.entry-content a:link,body.single div.entry-meta a,div.single div.entry-meta a:link,div.comments ol.commentlist a,div.comments ol.commentlist a:link{color:#003;text-decoration:underline;}
+a:visited,div.entry-content a:visited,body.single div.entry-meta a:visited,div.comments ol.commentlist a:visited{color:#555;}
+a:hover,div.entry-content a:hover,body.single div.entry-meta a:hover,div.comments ol.commentlist a:hover{color:#00f;}
+a:active,div.entry-content a:active,body.single div.entry-meta a:active,div.comments ol.commentlist a:active{color:#aaa;}
+body div#container{width:100%;}
+body div#wrapper{margin:0 auto;}
+body.archive .entry-content div.entry-content br{display:block;margin:0.2em 0;}
+body.archive div.entry-meta span{font-size:0.7em;}
+body.archive div.entry-meta span.meta-sep{margin:0 0.2em;}
+body.home div.entry-meta span{font-size:0.8em;}
+body.home div.entry-meta span.meta-sep{margin:0 0.3em;}
+body.home div.entry-meta,body.archive div.entry-meta{margin:-0.5em 0 2.5em;}
+body.single div.sidebar{display:none;}
+body.single div#container{margin:0 0 2em;}
+body.single div.entry-meta{border-bottom:2px solid #000;border-top:1px solid #000;margin:2em auto;padding:0.5em;width:75%;}
+body.archive div.p1{margin-top:2em;}
+div.entry-content abbr{border-bottom:1px dotted #333;cursor:help;}
+div.entry-content img{max-width:99%;}
+div.entry-content ul li{list-style:square;}
+div.entry-content ul li ul{margin-bottom:0.2em;}
+div.entry-content ul li ul li{list-style:circle;}
+div.sidebar ul li{list-style:none;}
+div.entry-date abbr.published{border:none;display:block;margin:0.3em 0 -0.5em;}
+div#footer{border-bottom:2px solid #000;border-top:1px solid #000;clear:both;font-size:0.7em;margin:0 0 2em;padding:0.5em 0;width:100%;}
+div#header div#blog-description,div#header h1#blog-title{letter-spacing:3px;text-transform:uppercase;}
+div#header h1#blog-title{font-size:3em;font-weight:400;margin:0.2em 0 0.1em;padding:0;}
+div.sidebar ul li ul li ul{margin:0 0 0.2em;}
+div#header h1#blog-title a:visited,div#header h1#blog-title a:hover{color:#000;}
+body img,div.entry-meta abbr.published{border:none;}
+div.sidebar ul li ul{margin:0 0 1.5em;}
+body.archive div.entry-meta span,body.home div.entry-meta span,div#footer{letter-spacing:1px;text-transform:uppercase;}
+body.home div.entry-meta,body.archive div.entry-meta,body.single div.entry-meta,div#footer,div#header{text-align:center;}
+body.single div#content div.entry-meta,div#content div.entry-content div.page-link,div#content div.entry-content q,div.comments ol#comments li div.comment-author,div.comments ol#pingbacks li div.comment-meta,div#content div.entry-content ul li ul li,div#content div.entry-date abbr.published,div#content div.navigation,div#globalnav ul li,div.comments ol#comments li div.comment-meta,div.formcontainer form#commentform div#comment-notes,div.formcontainer form#commentform div#loggedin,div.sidebar ul li.widget_calendar table#wp-calendar tfoot,div.sidebar ul li ul li ul{font-style:italic;}
+div.sidebar ul,div.sidebar ul li{margin:0;padding:0;}
+
+/* Edits and Additions by Ivion */
+
+body {
+    background: url('../blizzard.png');
+    background: url('../blizzard2X.png');
+    /* background: url('../debut_light.png'); */
+    /* background: url('../debut_light2X.png'); */
+    /* background: url('../groovepaper.png'); */
+    /* background: url('../groovepaper2X.png'); */
+    /* background: url('../subtle_white_feathers.png'); */
+
+    line-height: 130%;
+
+    font-family: 'Playfair Display', Times, 'Times New Roman', Tinos, serif;
+    padding: 0;
+}
+div.entry-content p, div.entry-content ul, div.post h2, div.post h3, div.post h4, div.post h5, div.post h6, hr, div#footer span.meta-sep {
+    font-family: 'EB Garamond', Garamond, 'Adobe Garamond Pro', 'Hoefler Text', 'Bitstream Charter', Georgia, serif;
+    font-size: 110%;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+h1#blog-title, .entry-title {
+    line-height: 130%;
+}
+body div#wrapper { max-width: 45em; }
+div#header div#blog-description {
+    border-top: 1px solid #000;
+    border-bottom: 2px solid #000;
+    font-size: 0.9em;
+    line-height: 200%;
+}
+body.single div#header div#blog-description { display: none; }
+body.single div#header h1#blog-title { font-size: 2em; border-bottom: 1px solid #000; }
+body div#container { margin: 0 0 2em; }
+body div#content { margin: 3em 0 0; }
+body.single div#content { max-width: 35em; margin: 3em auto 0; }
+body.archive h2.page-title { font-size: 1.3em; font-style: italic; }
+div.highlight pre { background: #FFF; padding: 0.25em; margin: 0.5em; overflow: auto; border: 1px solid #000; }
+div.entry-content pre, div.entry-content code { font-family: Consolas, 'Liberation Mono', Menlo, Cousine, 'Courier New', Courier, monospace; }
+div.entry-content pre { font-size: 80%; line-height: 130%; }
+div.entry-content code { font-size: 75%; }
+
+div.entry-content > p:first-child::first-letter { color: #bb0000; }
+div.front-post div.entry-content > p:first-child::first-line, body.single div.entry-content > p:first-child::first-line {
+    font-variant: small-caps;
+    letter-spacing: 0.05em;
+}
+div.front-post div.entry-content > p:first-child::first-letter, body.single div.entry-content > p:first-child::first-letter {
+    font-size: 3.3em;
+    float: left;
+    margin-right: 0.05em;
+}
+
+div.entry-content p strong {
+    font-weight: 400;
+    font-variant: small-caps;
+    letter-spacing: 0.05em;
+    color: #990000;
+}
+
+div.entry-content blockquote {
+    background: url('../blockquote.png') no-repeat top left;
+    margin-left: 0;
+    margin-right: 3em;
+    padding: 0 0 0 2em;
+}
+hr {
+    border-width: 0;
+    text-align: center;
+    font-size: 3em;
+    color: #aa0000;
+    margin: 0 auto 0.55em;
+}
+div.entry-content hr:after {
+    display: inline;
+    content: '☙';
+}
+hr#home-divider {
+    margin: 0 auto 1.1em;
+}
+hr#home-divider:after {
+    content: '❧☙';
+}
+
+div.post h2, div.post h3, div.post h4, div.post h5, div.post h6 { font-variant-numeric: lining-nums; }
+div.post .entry-title { font-size: 1.6em; margin: 0; }
+div.post h3.entry-title { font-size: 1.4em; }
+body.home div.post h3, body.single div.post h3 {
+    font-size: 1.2em;
+    font-variant: small-caps;
+    text-transform: lowercase;
+    letter-spacing: 0.05em;
+}
+div.post h4 {
+    font-size: 1.1em;
+    font-style: italic;
+}
+div.entry-content h2, div.entry-content h3 { margin: 1.5em 0 -0.6em; }
+div.entry-content h4 { margin: 1.5em 0 -0.7em; }
+div.entry-content h5, div.entry-content h6 { margin: 1.5em 0 -0.8em; }
+
+div.sidebar, p.paginator { text-align: center; }
+div#footer { line-height: 100%; }
+div.sidebar {
+    margin: 3em auto 2em;
+    overflow: hidden;
+    width: 180px;
+}
+div.sidebar ul li h3 {
+    font-size: 1em;
+    letter-spacing: 2px;
+    margin: 0;
+    text-decoration: underline;
+    font-variant: small-caps;
+}
+ul.tagcloud li { display: inline-block; }
+ul.tagcloud li.tagcloud-more { display: block; }
+li.tag-1 { font-size: 140%; }
+li.tag-2 { font-size: 125%; }
+li.tag-3 { font-size: 110%; }
+li.tag-4 { font-size: 90%; }
+
+@font-face {
+    font-family: 'EB Garamond';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../EBGaramond12-Regular.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'EB Garamond';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../EBGaramond12-Italic.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../PlayfairDisplay-Regular.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Playfair Display';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../PlayfairDisplay-Italic.woff2') format('woff2');
+}
+
+@media (min-width: 600px) {
+    body { margin: 0 1em; font-size: 110%; }
+}
+@media (min-width: 740px) {
+    body div#container { float: left; margin: 0 -200px 2em 0; }
+    body div#content { margin: 3em 200px 0 0; }
+    body div.sidebar { float: right; }
+    body.single { font-size: 115%; }
+}
+@media (min-width: 880px) {
+    body { font-size: 115%; }
+}

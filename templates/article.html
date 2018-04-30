@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}{{ article.title|striptags }} ❧ {{ SITENAME }}{% endblock %}
+
+{% block body_class %}"single"{% endblock %}
+
+{% block content %}
+<div class="post">
+  <h2 class="entry-title">{{ article.title }}</h2>
+<div class="entry-content">{{ article.content }}</div>
+<div class="entry-meta">
+  Posted on <abbr class="published" title="{{ article.date.isoformat() }}">{{ article.locale_date }}</abbr>.
+  {% if article.modified %}<abbr class="modified" title="{{ article.modified.isoformat() }}">Last updated on {{ article.locale_modified }}</abbr>{% endif %}
+  
+  Filed under <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>.
+  {% if article.tags %}Tagged {% for tag in article.tags|sort %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{%if not loop.last %}, {% endif %}{% endfor %}. {% endif %}
+</div>
+</div><!-- .post -->
+{% endblock %}

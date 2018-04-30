@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+{% if articles %}
+{% for article in articles_page.object_list %}
+{% if loop.first and not articles_page.has_previous() %}
+<div class="post front-post">
+{% else %}
+<div class="post">
+{% endif %}
+  <h2 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
+  <div class="entry-date"><abbr class="published" title="{{ article.date.isoformat() }}">{{ article.locale_date }}</abbr></div>
+  <div class="entry-content">
+    {% if loop.first and not articles_page.has_previous() %}
+    {{ article.content }}
+    {% else %}
+    {{ article.summary }}
+    {% endif %}
+  </div>
+  <div class="entry-meta">
+    <span class="entry-category">Filed in <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></span>
+    {% if article.tags %}
+    <span class="meta-sep">|</span>
+    <span class="entry-tags">Tagged {% for tag in article.tags|sort %}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{%if not loop.last %}, {% endif %}{% endfor %}</span>
+    {% endif %}
+  </div>
+</div><!-- .post -->
+{% if loop.first and not articles_page.has_previous() %}<hr id="home-divider">{% endif %}
+{% endfor %}
+{% endif %}
+{% endblock content %}

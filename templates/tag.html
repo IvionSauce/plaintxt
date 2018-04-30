@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Tag Archives: {{ tag }} ❧ {{ SITENAME }}{% endblock %}
+{% block body_class %}"archive"{% endblock %}
+{% block content %}
+<h2 class="page-title">Tag Archives: {{ tag }}</h2>
+{% if articles %}
+{% for article in articles_page.object_list %}
+{% if loop.first %}
+<div class="post p1">
+{% else %}
+<div class="post">
+{% endif %}
+  <h3 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
+  <div class="entry-date"><abbr class="published" title="{{ article.date.isoformat() }}">{{ article.locale_date }}</abbr></div>
+  <div class="entry-content">{{ article.summary }}</div>
+  <div class="entry-meta">
+    <span class="entry-category">Filed in <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></span>
+    {% if article.tags|length > 1 %}
+    <span class="meta-sep">|</span>
+    <span class="entry-tags">Also tagged
+      {% for tag_ in article.tags|sort if tag_ != tag %}
+      <a href="{{ SITEURL }}/{{ tag_.url }}">{{ tag_ }}</a>{% if not loop.last %}, {% endif %}
+      {% endfor %}
+    </span>
+    {% endif %}
+  </div>
+</div><!-- .post -->
+{% endfor %}
+{% endif %}
+{% endblock content %}
